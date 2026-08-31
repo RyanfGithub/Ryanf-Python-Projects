@@ -81,7 +81,7 @@ round3 = [fight31, fight32]
 
 simulateRound(round3, "Semi Finals")
 
-championship = Fight(fight31.winner, fight24.winner, "undetermined")
+championship = Fight(fight31.winner, fight32.winner, "undetermined")
 Championship = [championship]
 
 simulateRound(Championship, "Championship")
