@@ -1,19 +1,19 @@
 import os
 import shutil
 
-sortedSomething = False
+sorted_something = False
 
 #sorting function
 def sort(type, extension):
     os.chdir("C:/Users/ryend/Downloads")
 
-    alreadyExists = False
+    already_exists = False
 
     for file in os.listdir():
         if file == type:
-            alreadyExists = True
+            already_exists = True
 
-    if alreadyExists == False:
+    if already_exists == False:
         os.mkdir(type)
 
     for file in os.listdir():
@@ -22,35 +22,30 @@ def sort(type, extension):
             shutil.move(file, type)
 
 
+
 #Ask to sort applications
-while True:
-    sortApplications = input("Sort Applications? y/n: ")
+def ask_if_sort(type, extenstion):
+    global sorted_something
+    while True:
+        sort_type = input(f"Sort {type}? y/n: ")
 
-    if sortApplications == "y":
-        sort("Applications", ".exe")
-        sortedSomething = True
-        break
-    elif sortApplications == "n":
-        break
-    else:
-        print("Invalid Input")
+        if sort_type == "y":
+            sorted_something = True
+            sort(type, extenstion)
+            break
+        elif sort_type == "n":
+            break
+        else:
+            print("Invalid Input")
 
-#Ask to sort images
-while True: 
-    sortImages = input("Sort Images? y/n ")
 
-    if sortImages == "y":
-        sort("Images", ".jpg")
-        sortedSomething = True
-        break
-    elif sortImages == "n":
-        break
-    else:
-        print("Invalid Input")
+ask_if_sort('Images', '.jpg')
+ask_if_sort('Applications' '.exe')
+ask_if_sort('Documents' '.pdf')
 
 
 #Don't worry about this part 😈
-if sortedSomething == False:
+if sorted_something == False:
     while True:
         if input("You didn't sort anything, why did you run this? \nAre you an idiot? y/n: ") == "y":
             print("good boy")
@@ -77,7 +72,7 @@ else:
 
         nty += 1
 
-        if input(message) == "thank you":
+        if input(message).upper() == "THANK YOU":
             print("good boy")
             break
     
