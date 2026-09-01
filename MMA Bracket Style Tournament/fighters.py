@@ -19,4 +19,4 @@ fighter16 = Fighter("Khamzat Chimaev", 88, 1)
 
 fighters = [fighter1, fighter2, fighter3, fighter4, fighter5, fighter6, fighter7, fighter8, fighter9, fighter10, fighter11, fighter12, fighter13, fighter14, fighter15, fighter16]
 
-seededfighters = sorted(fighters, key=lambda x: x.skillLevel, reverse=True)
+seeded_fighters = sorted(fighters, key=lambda x: x.skillLevel, reverse=True)
