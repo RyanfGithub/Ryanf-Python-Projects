@@ -5,7 +5,7 @@ sorted_something = False
 
 #sorting function
 def sort(type, extension):
-    os.chdir(#Replace with folder you want to clean)
+    os.chdir("Replace with folder you want to clean")
 
     already_exists = False
 
